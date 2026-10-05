@@ -1,12 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Heritage Antique Jewels — Fine Antique & Estate Jewellery</title>
-<meta name="description" content="Heritage Antique Jewels — one-of-a-kind antique and estate jewellery with provenance. Sourced, authenticated and restored with care.">
+<script>document.documentElement.className='js';</script>
+<meta name="description" content="Heritage Antique Jewels — one-of-a-kind antique, estate and signed jewellery. Browse by era, from 17th-century pieces to Art Deco and mid-century signed jewels.">
+<link rel="canonical" href="https://www.heritageantiquejewels.com/">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Heritage Antique Jewels">
+<meta property="og:title" content="Heritage Antique Jewels — Fine Antique &amp; Estate Jewellery">
+<meta property="og:description" content="One-of-a-kind antique, estate and signed jewellery. Browse by era.">
+<meta property="og:url" content="https://www.heritageantiquejewels.com/"><meta property="og:image" content="https://www.heritageantiquejewels.com/images/hero-velvet-study.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebSite", "name": "Heritage Antique Jewels", "alternateName": "Heritage Antique Jewels", "url": "https://www.heritageantiquejewels.com/"}, {"@context": "https://schema.org", "@type": "Organization", "name": "Heritage Antique Jewels", "url": "https://www.heritageantiquejewels.com/", "email": "enquiries@heritageantiquejewels.com", "description": "Dealer in antique, estate and signed jewellery."}]</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Jost:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Marcellus&family=Jost:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect x='30' y='30' width='40' height='40' transform='rotate(45 50 50)' fill='%23C9A76B'/></svg>">
 <style>
 :root{
@@ -38,23 +46,16 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:400;line-height:1.12}
 .btn.solid{background:var(--gold);color:var(--pine)}
 .btn.solid:hover{background:var(--pale-gold);border-color:var(--pale-gold)}
 
-/* ---------- preloader ---------- */
-#loader{position:fixed;inset:0;background:var(--pine);z-index:200;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;transition:opacity .8s ease,visibility .8s}
-#loader.done{opacity:0;visibility:hidden}
-#loader .mark{width:15px;height:15px;transform:rotate(45deg);background:var(--gold);animation:pulse 1.4s ease-in-out infinite}
-#loader .word{font-family:var(--display);font-size:22px;letter-spacing:.6em;text-indent:.6em;color:var(--ivory)}
-#loader .sub{font-size:9px;letter-spacing:.55em;text-indent:.55em;text-transform:uppercase;color:var(--gold)}
-@keyframes pulse{0%,100%{opacity:.35;transform:rotate(45deg) scale(.85)}50%{opacity:1;transform:rotate(45deg) scale(1)}}
-
 /* ---------- reveals ---------- */
-.reveal{opacity:0;transform:translateY(34px);transition:opacity 1.1s cubic-bezier(.22,.61,.36,1),transform 1.1s cubic-bezier(.22,.61,.36,1)}
-.reveal.in{opacity:1;transform:none}
+.js .reveal{opacity:0;transform:translateY(34px);transition:opacity 1.1s cubic-bezier(.22,.61,.36,1),transform 1.1s cubic-bezier(.22,.61,.36,1)}
+.js .reveal.in{opacity:1;transform:none}
 .reveal-line{overflow:hidden}
-.reveal-line span{display:block;transform:translateY(110%);transition:transform 1.1s cubic-bezier(.22,.61,.36,1)}
-.reveal-line.in span{transform:none}
+.reveal-line span{display:block}
+.js .reveal-line span{transform:translateY(110%);transition:transform 1.1s cubic-bezier(.22,.61,.36,1)}
+.js .reveal-line.in span{transform:none}
 [data-parallax]{will-change:transform}
 @media (prefers-reduced-motion:reduce){
-  .reveal,.reveal-line span{opacity:1;transform:none;transition:none}
+  .js .reveal,.js .reveal-line span{opacity:1;transform:none;transition:none}
   *{animation:none!important;transition:none!important}
   html{scroll-behavior:auto}
 }
@@ -70,12 +71,12 @@ nav.scrolled .nav-inner{padding:14px 40px}
 .nav-links a:hover::after{width:100%}
 .nav-links.right{justify-content:flex-end}
 .logo{text-align:center;line-height:1.15}
-.logo .word{font-family:var(--display);font-size:23px;letter-spacing:.4em;text-indent:.4em;display:block;color:var(--ivory)}
+.logo .word{font-family:'Italiana',serif;font-size:23px;letter-spacing:.4em;text-indent:.4em;display:block;color:var(--ivory)}
 .logo .sub{font-size:8px;letter-spacing:.6em;text-indent:.6em;text-transform:uppercase;color:var(--gold);display:block;margin-top:3px}
 
 /* ---------- hero ---------- */
 .hero{position:relative;height:100svh;min-height:640px;display:flex;align-items:flex-end;overflow:hidden;background:var(--deep)}
-.hero-bg{position:absolute;inset:-6%;background:url('images/hero-panther-wrist.jpg') center 24%/cover no-repeat;animation:kenburns 26s ease-in-out infinite alternate}
+.hero-bg{position:absolute;inset:-6%;background:url('images/hero-velvet-study.jpg') 62% 34%/cover no-repeat;background-image:image-set(url('images/hero-velvet-study.avif') type('image/avif'),url('images/hero-velvet-study.jpg') type('image/jpeg'));animation:kenburns 26s ease-in-out infinite alternate}
 @keyframes kenburns{from{transform:scale(1)}to{transform:scale(1.08)}}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,17,9,.55) 0%,rgba(8,17,9,.05) 38%,rgba(8,17,9,.28) 62%,rgba(8,17,9,.92) 100%)}
 .hero-content{position:relative;z-index:2;width:100%;max-width:1440px;margin:0 auto;padding:0 40px 9vh}
@@ -183,6 +184,36 @@ footer{background:var(--deep);color:rgba(245,240,231,.7);padding:100px 0 44px}
 .news-form button:hover{background:var(--pale-gold)}
 .foot-base{border-top:1px solid rgba(245,240,231,.1);padding-top:30px;display:flex;justify-content:space-between;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(245,240,231,.38);flex-wrap:wrap;gap:12px}
 
+
+/* ---------- hero video ---------- */
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.4s ease;z-index:1}
+.hero-video.on{opacity:1}
+.hero::after{z-index:1}
+.hero-content,.scroll-cue{z-index:3}
+/* ---------- eras ---------- */
+.eras{background:var(--deep);padding:130px 0 120px}
+.eras-head{text-align:center;max-width:640px;margin:0 auto 60px}
+.eras-head h2{font-size:clamp(32px,4.2vw,52px);letter-spacing:.05em;margin:16px 0 16px}
+.eras-head p{color:rgba(245,240,231,.68)}
+.era-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.era-tile{position:relative;display:block;aspect-ratio:4/5;overflow:hidden;background:#000;border:1px solid rgba(201,167,107,.2);transition:border-color .4s}
+.era-tile:hover{border-color:rgba(201,167,107,.7)}
+.era-tile img{width:100%;height:100%;object-fit:cover;transition:transform .9s ease}
+.era-tile:hover img{transform:scale(1.05)}
+.era-info{position:absolute;inset:auto 0 0 0;padding:26px 24px;background:linear-gradient(180deg,transparent,rgba(0,0,0,.85));display:flex;flex-direction:column;gap:4px}
+.era-name{font-family:var(--display);font-size:24px;letter-spacing:.06em;color:var(--ivory)}
+.era-dates{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold)}
+.era-count{font-size:12px;color:rgba(245,240,231,.6)}
+.eras-cta{text-align:center;margin-top:54px}
+.nav-mobile{display:none}
+@media (max-width:980px){
+  .era-grid{grid-template-columns:repeat(2,1fr);gap:12px}
+  .era-name{font-size:18px}.era-info{padding:18px 16px}
+  .nav-inner{grid-template-columns:1fr auto}
+  .nav-inner .logo{text-align:left}.nav-inner .logo .word,.nav-inner .logo .sub{text-indent:0}
+  nav .nav-inner{grid-template-columns:1fr auto}
+  .nav-mobile{justify-self:end;display:block;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--pale-gold);border:1px solid rgba(201,167,107,.5);padding:9px 14px}
+}
 /* ---------- responsive ---------- */
 @media (max-width:980px){
   .wrap{padding:0 26px}
@@ -206,12 +237,6 @@ footer{background:var(--deep);color:rgba(245,240,231,.7);padding:100px 0 44px}
 </head>
 <body>
 
-<div id="loader" aria-hidden="true">
-  <div class="mark"></div>
-  <div class="word">HERITAGE</div>
-  <div class="sub">Antique Jewels</div>
-</div>
-
 <nav id="nav" aria-label="Main">
   <div class="nav-inner">
     <div class="nav-links">
@@ -225,16 +250,18 @@ footer{background:var(--deep);color:rgba(245,240,231,.7);padding:100px 0 44px}
       <span class="sub">Antique Jewels</span>
     </a>
     <div class="nav-links right">
+      <a href="collection.html">Collection</a>
       <a href="#story">The House</a>
-      <a href="#enquire">Sell to Us</a>
       <a href="#enquire">Contact</a>
     </div>
+    <a class="nav-mobile" href="collection.html">Collection</a>
   </div>
 </nav>
 
 <!-- HERO -->
 <header class="hero" id="top">
   <div class="hero-bg" aria-hidden="true"></div>
+  <video class="hero-video" muted loop playsinline preload="none" aria-hidden="true"></video>
   <div class="hero-content">
     <span class="eyebrow reveal">Fine Antique &amp; Estate Jewellery</span>
     <h1 class="reveal-line"><span>Jewels with a past.</span></h1>
@@ -251,8 +278,8 @@ footer{background:var(--deep);color:rgba(245,240,231,.7);padding:100px 0 44px}
 <!-- MARQUEE -->
 <div class="marquee" aria-hidden="true">
   <div class="marquee-track">
-    <span><b>One of a kind</b> <i>◆</i> Authenticated &amp; certified <i>◆</i> Insured worldwide shipping <i>◆</i> Est. provenance with every piece <i>◆</i></span>
-    <span><b>One of a kind</b> <i>◆</i> Authenticated &amp; certified <i>◆</i> Insured worldwide shipping <i>◆</i> Est. provenance with every piece <i>◆</i></span>
+    <span><b>One of a kind</b> <i>◆</i> Authenticated &amp; certified <i>◆</i> Insured worldwide shipping <i>◆</i> Expert-dated &amp; condition reported <i>◆</i></span>
+    <span><b>One of a kind</b> <i>◆</i> Authenticated &amp; certified <i>◆</i> Insured worldwide shipping <i>◆</i> Expert-dated &amp; condition reported <i>◆</i></span>
   </div>
 </div>
 
@@ -265,9 +292,47 @@ footer{background:var(--deep);color:rgba(245,240,231,.7);padding:100px 0 44px}
   </div>
 </section>
 
+<!-- BROWSE BY ERA -->
+<section class="eras" id="eras">
+  <div class="wrap">
+    <div class="eras-head">
+      <span class="eyebrow reveal">Browse by Era</span>
+      <h2 class="reveal">Four centuries in one vitrine</h2>
+      <p class="reveal">From 17th-century Portuguese gold to Art Deco platinum and signed pieces by the great houses.</p>
+    </div>
+    <div class="era-grid">
+      <a class="era-tile reveal" href="collection.html?era=early" style="transition-delay:0.00s">
+        <picture><source srcset="images/catalogue/antique-dragon-bracelet-sm.avif" type="image/avif"><img src="images/catalogue/antique-dragon-bracelet-sm.jpg" alt="17th &amp; 18th Century jewellery" loading="lazy"></picture>
+        <span class="era-info"><span class="era-name">17th &amp; 18th Century</span><span class="era-dates">Before 1800</span><span class="era-count" data-era-count="early"></span></span>
+      </a>
+      <a class="era-tile reveal" href="collection.html?era=c19" style="transition-delay:0.06s">
+        <picture><source srcset="images/catalogue/aquamarine-pendant-20ct-sm.avif" type="image/avif"><img src="images/catalogue/aquamarine-pendant-20ct-sm.jpg" alt="19th Century jewellery" loading="lazy"></picture>
+        <span class="era-info"><span class="era-name">19th Century</span><span class="era-dates">1800 – 1899</span><span class="era-count" data-era-count="c19"></span></span>
+      </a>
+      <a class="era-tile reveal" href="collection.html?era=belle-epoque" style="transition-delay:0.12s">
+        <picture><source srcset="images/catalogue/tremblant-flower-bouquet-brooch-sm.avif" type="image/avif"><img src="images/catalogue/tremblant-flower-bouquet-brooch-sm.jpg" alt="Belle Époque jewellery" loading="lazy"></picture>
+        <span class="era-info"><span class="era-name">Belle Époque</span><span class="era-dates">c. 1900 – 1915</span><span class="era-count" data-era-count="belle-epoque"></span></span>
+      </a>
+      <a class="era-tile reveal" href="collection.html?era=art-deco" style="transition-delay:0.18s">
+        <picture><source srcset="images/catalogue/art-deco-bird-of-paradise-emerald-brooch-sm.avif" type="image/avif"><img src="images/catalogue/art-deco-bird-of-paradise-emerald-brooch-sm.jpg" alt="Art Deco jewellery" loading="lazy"></picture>
+        <span class="era-info"><span class="era-name">Art Deco</span><span class="era-dates">1920 – 1935</span><span class="era-count" data-era-count="art-deco"></span></span>
+      </a>
+      <a class="era-tile reveal" href="collection.html?era=mid-century" style="transition-delay:0.24s">
+        <picture><source srcset="images/catalogue/boucheron-braid-bracelet-sm.avif" type="image/avif"><img src="images/catalogue/boucheron-braid-bracelet-sm.jpg" alt="Mid-Century jewellery" loading="lazy"></picture>
+        <span class="era-info"><span class="era-name">Mid-Century</span><span class="era-dates">1940s – 1950s</span><span class="era-count" data-era-count="mid-century"></span></span>
+      </a>
+      <a class="era-tile reveal" href="collection.html?era=signed" style="transition-delay:0.30s">
+        <picture><source srcset="images/catalogue/van-cleef-arpels-sapphire-ring-sm.avif" type="image/avif"><img src="images/catalogue/van-cleef-arpels-sapphire-ring-sm.jpg" alt="Signed &amp; Vintage jewellery" loading="lazy"></picture>
+        <span class="era-info"><span class="era-name">Signed &amp; Vintage</span><span class="era-dates">Named houses &amp; later pieces</span><span class="era-count" data-era-count="signed"></span></span>
+      </a>
+    </div>
+    <div class="eras-cta reveal"><a class="btn" href="collection.html">View the full collection</a></div>
+  </div>
+</section>
+
 <!-- CHAPTER I — NECKLACES & PEARLS -->
 <section class="chapter-hero" id="ch-necklaces">
-  <div class="bg" data-parallax="0.12" style="background-image:url('images/panther-long-chain.jpg')"></div>
+  <div class="bg" data-parallax="0.12" style="background-image:url('images/panther-long-chain.jpg');background-image:image-set(url('images/panther-long-chain.avif') type('image/avif'),url('images/panther-long-chain.jpg') type('image/jpeg'))"></div>
   <div class="chapter-head">
     <div>
       <span class="chapter-num reveal">CHAPTER I</span>
@@ -283,27 +348,27 @@ footer{background:var(--deep);color:rgba(245,240,231,.7);padding:100px 0 44px}
   </div>
   <div class="shelf" id="s1">
     <article class="card reveal">
-      <div class="visual"><span class="tag">Featured</span><img src="images/panther-short-chain.jpg" alt="Gold panther pendant necklace on a layered chain" loading="lazy"></div>
+      <div class="visual"><span class="tag">Featured</span><picture><source srcset="images/panther-short-chain.avif" type="image/avif"><img src="images/panther-short-chain.jpg" alt="Gold panther pendant necklace on a layered chain" loading="lazy"></picture></div>
       <div class="info"><h3>Gold Panther Pendant Necklace</h3><p class="meta">18k yellow gold · diamond-set bale</p>
       <div class="row"><span class="price">Price on request</span><a class="add" href="mailto:enquiries@heritageantiquejewels.com?subject=Enquiry%3A%20Gold%20Panther%20Pendant%20Necklace">Enquire</a></div></div>
     </article>
     <article class="card reveal" style="transition-delay:.07s">
-      <div class="visual"><img src="images/antique-gold-chain.jpg" alt="Antique fancy-link gold guard chain worn doubled" loading="lazy"></div>
+      <div class="visual"><picture><source srcset="images/antique-gold-chain.avif" type="image/avif"><img src="images/antique-gold-chain.jpg" alt="Antique fancy-link gold guard chain worn doubled" loading="lazy"></picture></div>
       <div class="info"><h3>Antique Fancy-Link Chain</h3><p class="meta">Yellow gold · wearable doubled</p>
       <div class="row"><span class="price">Price on request</span><a class="add" href="mailto:enquiries@heritageantiquejewels.com?subject=Enquiry%3A%20Antique%20Fancy-Link%20Chain">Enquire</a></div></div>
     </article>
     <article class="card reveal" style="transition-delay:.14s">
-      <div class="visual"><img src="images/diamond-riviere.jpg" alt="Diamond rivière necklace with articulated drop" loading="lazy"></div>
+      <div class="visual"><picture><source srcset="images/diamond-riviere.avif" type="image/avif"><img src="images/diamond-riviere.jpg" alt="Diamond rivière necklace with articulated drop" loading="lazy"></picture></div>
       <div class="info"><h3>Diamond Rivière Necklace</h3><p class="meta">Graduated clusters · articulated drop</p>
       <div class="row"><span class="price">Price on request</span><a class="add" href="mailto:enquiries@heritageantiquejewels.com?subject=Enquiry%3A%20Diamond%20Rivi%C3%A8re%20Necklace">Enquire</a></div></div>
     </article>
     <article class="card reveal" style="transition-delay:.21s">
-      <div class="visual"><img src="images/pearl-choker-clasp.jpg" alt="Double strand pearl choker with diamond cluster clasp" loading="lazy"></div>
+      <div class="visual"><picture><source srcset="images/pearl-choker-clasp.avif" type="image/avif"><img src="images/pearl-choker-clasp.jpg" alt="Double strand pearl choker with diamond cluster clasp" loading="lazy"></picture></div>
       <div class="info"><h3>Pearl Choker, Diamond Clasp</h3><p class="meta">Cultured pearls · cluster clasp</p>
       <div class="row"><span class="price">Price on request</span><a class="add" href="mailto:enquiries@heritageantiquejewels.com?subject=Enquiry%3A%20Pearl%20Choker">Enquire</a></div></div>
     </article>
     <article class="card reveal" style="transition-delay:.28s">
-      <div class="visual"><img src="images/pearl-double-strand.jpg" alt="Double strand pearl necklace worn with navy silk" loading="lazy"></div>
+      <div class="visual"><picture><source srcset="images/pearl-double-strand.avif" type="image/avif"><img src="images/pearl-double-strand.jpg" alt="Double strand pearl necklace worn with navy silk" loading="lazy"></picture></div>
       <div class="info"><h3>Double Strand Pearl Necklace</h3><p class="meta">Cultured pearls · graduated strands</p>
       <div class="row"><span class="price">Price on request</span><a class="add" href="mailto:enquiries@heritageantiquejewels.com?subject=Enquiry%3A%20Double%20Strand%20Pearl%20Necklace">Enquire</a></div></div>
     </article>
@@ -312,7 +377,7 @@ footer{background:var(--deep);color:rgba(245,240,231,.7);padding:100px 0 44px}
 
 <!-- CHAPTER II — BRACELETS -->
 <section class="chapter-hero" id="ch-bracelets">
-  <div class="bg" data-parallax="0.12" style="background-image:url('images/woven-gold-bracelet.jpg')"></div>
+  <div class="bg" data-parallax="0.12" style="background-image:url('images/woven-gold-bracelet.jpg');background-image:image-set(url('images/woven-gold-bracelet.avif') type('image/avif'),url('images/woven-gold-bracelet.jpg') type('image/jpeg'))"></div>
   <div class="chapter-head">
     <div>
       <span class="chapter-num reveal">CHAPTER II</span>
@@ -328,42 +393,42 @@ footer{background:var(--deep);color:rgba(245,240,231,.7);padding:100px 0 44px}
   </div>
   <div class="shelf" id="s2">
     <article class="card reveal">
-      <div class="visual"><span class="tag">Featured</span><img src="images/artdeco-buckle-bracelet.jpg" alt="Art Deco gold buckle bracelet with rubies and diamonds" loading="lazy"></div>
+      <div class="visual"><span class="tag">Featured</span><picture><source srcset="images/artdeco-buckle-bracelet.avif" type="image/avif"><img src="images/artdeco-buckle-bracelet.jpg" alt="Art Deco gold buckle bracelet with rubies and diamonds" loading="lazy"></picture></div>
       <div class="info"><h3>Art Deco Buckle Bracelet</h3><p class="meta">Yellow gold · ruby &amp; diamond</p>
       <div class="row"><span class="price">Price on request</span><a class="add" href="mailto:enquiries@heritageantiquejewels.com?subject=Enquiry%3A%20Art%20Deco%20Buckle%20Bracelet">Enquire</a></div></div>
     </article>
     <article class="card reveal" style="transition-delay:.07s">
-      <div class="visual"><span class="tag">New arrival</span><img src="images/tiger-head-bracelet.jpg" alt="Gold tiger head bracelet with enamel and diamonds" loading="lazy"></div>
+      <div class="visual"><span class="tag">New arrival</span><picture><source srcset="images/tiger-head-bracelet.avif" type="image/avif"><img src="images/tiger-head-bracelet.jpg" alt="Gold tiger head bracelet with enamel and diamonds" loading="lazy"></picture></div>
       <div class="info"><h3>Enamel Tiger-Head Bracelet</h3><p class="meta">Textured gold · enamel &amp; diamond</p>
       <div class="row"><span class="price">Price on request</span><a class="add" href="mailto:enquiries@heritageantiquejewels.com?subject=Enquiry%3A%20Enamel%20Tiger-Head%20Bracelet">Enquire</a></div></div>
     </article>
     <article class="card reveal" style="transition-delay:.14s">
-      <div class="visual"><img src="images/diamond-foliate-bracelet.jpg" alt="Diamond foliate link bracelet in white metal" loading="lazy"></div>
+      <div class="visual"><picture><source srcset="images/diamond-foliate-bracelet.avif" type="image/avif"><img src="images/diamond-foliate-bracelet.jpg" alt="Diamond foliate link bracelet in white metal" loading="lazy"></picture></div>
       <div class="info"><h3>Diamond Foliate Bracelet</h3><p class="meta">White metal · pierced leaf links</p>
       <div class="row"><span class="price">Price on request</span><a class="add" href="mailto:enquiries@heritageantiquejewels.com?subject=Enquiry%3A%20Diamond%20Foliate%20Bracelet">Enquire</a></div></div>
     </article>
     <article class="card reveal" style="transition-delay:.21s">
-      <div class="visual"><img src="images/tennis-bracelet.jpg" alt="Diamond line tennis bracelet on a marble table" loading="lazy"></div>
+      <div class="visual"><picture><source srcset="images/tennis-bracelet.avif" type="image/avif"><img src="images/tennis-bracelet.jpg" alt="Diamond line tennis bracelet on a marble table" loading="lazy"></picture></div>
       <div class="info"><h3>Diamond Tennis Bracelet</h3><p class="meta">White metal · collet-set diamonds</p>
       <div class="row"><span class="price">Price on request</span><a class="add" href="mailto:enquiries@heritageantiquejewels.com?subject=Enquiry%3A%20Diamond%20Tennis%20Bracelet">Enquire</a></div></div>
     </article>
     <article class="card reveal" style="transition-delay:.28s">
-      <div class="visual"><img src="images/woven-gold-desk.jpg" alt="Braided woven gold bracelet on a mahogany desk" loading="lazy"></div>
+      <div class="visual"><picture><source srcset="images/woven-gold-desk.avif" type="image/avif"><img src="images/woven-gold-desk.jpg" alt="Braided woven gold bracelet on a mahogany desk" loading="lazy"></picture></div>
       <div class="info"><h3>Woven Gold Bracelet</h3><p class="meta">Yellow gold · plaited textured links</p>
       <div class="row"><span class="price">Price on request</span><a class="add" href="mailto:enquiries@heritageantiquejewels.com?subject=Enquiry%3A%20Woven%20Gold%20Bracelet">Enquire</a></div></div>
     </article>
     <article class="card reveal" style="transition-delay:.35s">
-      <div class="visual"><img src="images/filigree-link-bracelet.jpg" alt="Antique gold filigree navette-link bracelet" loading="lazy"></div>
+      <div class="visual"><picture><source srcset="images/filigree-link-bracelet.avif" type="image/avif"><img src="images/filigree-link-bracelet.jpg" alt="Antique gold filigree navette-link bracelet" loading="lazy"></picture></div>
       <div class="info"><h3>Filigree Link Bracelet</h3><p class="meta">Yellow gold · pearl-set navette links</p>
       <div class="row"><span class="price">Price on request</span><a class="add" href="mailto:enquiries@heritageantiquejewels.com?subject=Enquiry%3A%20Filigree%20Link%20Bracelet">Enquire</a></div></div>
     </article>
     <article class="card reveal" style="transition-delay:.42s">
-      <div class="visual"><img src="images/fluted-gold-cuff.jpg" alt="Fluted gold cuff bracelet worn with black velvet" loading="lazy"></div>
+      <div class="visual"><picture><source srcset="images/fluted-gold-cuff.avif" type="image/avif"><img src="images/fluted-gold-cuff.jpg" alt="Fluted gold cuff bracelet worn with black velvet" loading="lazy"></picture></div>
       <div class="info"><h3>Fluted Gold Cuff</h3><p class="meta">18k yellow gold · sculptural fluting</p>
       <div class="row"><span class="price">Price on request</span><a class="add" href="mailto:enquiries@heritageantiquejewels.com?subject=Enquiry%3A%20Fluted%20Gold%20Cuff">Enquire</a></div></div>
     </article>
     <article class="card reveal" style="transition-delay:.49s">
-      <div class="visual"><img src="images/diamond-line-bracelet.jpg" alt="Delicate gold and diamond line bracelet" loading="lazy"></div>
+      <div class="visual"><picture><source srcset="images/diamond-line-bracelet.avif" type="image/avif"><img src="images/diamond-line-bracelet.jpg" alt="Delicate gold and diamond line bracelet" loading="lazy"></picture></div>
       <div class="info"><h3>Diamond Line Bracelet</h3><p class="meta">Yellow gold · old-cut diamonds</p>
       <div class="row"><span class="price">Price on request</span><a class="add" href="mailto:enquiries@heritageantiquejewels.com?subject=Enquiry%3A%20Diamond%20Line%20Bracelet">Enquire</a></div></div>
     </article>
@@ -372,7 +437,7 @@ footer{background:var(--deep);color:rgba(245,240,231,.7);padding:100px 0 44px}
 
 <!-- CHAPTER III — EARRINGS -->
 <section class="chapter-hero" id="ch-earrings">
-  <div class="bg" data-parallax="0.12" style="background-image:url('images/ruby-fringe-earrings.jpg')"></div>
+  <div class="bg" data-parallax="0.12" style="background-image:url('images/ruby-fringe-earrings.jpg');background-image:image-set(url('images/ruby-fringe-earrings.avif') type('image/avif'),url('images/ruby-fringe-earrings.jpg') type('image/jpeg'))"></div>
   <div class="chapter-head">
     <div>
       <span class="chapter-num reveal">CHAPTER III</span>
@@ -388,37 +453,37 @@ footer{background:var(--deep);color:rgba(245,240,231,.7);padding:100px 0 44px}
   </div>
   <div class="shelf" id="s3">
     <article class="card reveal">
-      <div class="visual"><span class="tag">New arrival</span><img src="images/ruby-fringe-earrings.jpg" alt="Ruby and diamond fringe earrings" loading="lazy"></div>
+      <div class="visual"><span class="tag">New arrival</span><picture><source srcset="images/ruby-fringe-earrings.avif" type="image/avif"><img src="images/ruby-fringe-earrings.jpg" alt="Ruby and diamond fringe earrings" loading="lazy"></picture></div>
       <div class="info"><h3>Ruby &amp; Diamond Fringe Earrings</h3><p class="meta">Pearl clusters · articulated drops</p>
       <div class="row"><span class="price">Price on request</span><a class="add" href="mailto:enquiries@heritageantiquejewels.com?subject=Enquiry%3A%20Ruby%20%26%20Diamond%20Fringe%20Earrings">Enquire</a></div></div>
     </article>
     <article class="card reveal" style="transition-delay:.07s">
-      <div class="visual"><img src="images/diamond-drop-earrings.jpg" alt="Diamond teardrop pendant earrings" loading="lazy"></div>
+      <div class="visual"><picture><source srcset="images/diamond-drop-earrings.avif" type="image/avif"><img src="images/diamond-drop-earrings.jpg" alt="Diamond teardrop pendant earrings" loading="lazy"></picture></div>
       <div class="info"><h3>Diamond Drop Earrings</h3><p class="meta">Pavé teardrops · surmount studs</p>
       <div class="row"><span class="price">Price on request</span><a class="add" href="mailto:enquiries@heritageantiquejewels.com?subject=Enquiry%3A%20Diamond%20Drop%20Earrings">Enquire</a></div></div>
     </article>
     <article class="card reveal" style="transition-delay:.14s">
-      <div class="visual"><img src="images/diamond-spray-earclips.jpg" alt="Diamond flower spray ear clips" loading="lazy"></div>
+      <div class="visual"><picture><source srcset="images/diamond-spray-earclips.avif" type="image/avif"><img src="images/diamond-spray-earclips.jpg" alt="Diamond flower spray ear clips" loading="lazy"></picture></div>
       <div class="info"><h3>Diamond Spray Ear Clips</h3><p class="meta">Floral spray · mixed-cut diamonds</p>
       <div class="row"><span class="price">Price on request</span><a class="add" href="mailto:enquiries@heritageantiquejewels.com?subject=Enquiry%3A%20Diamond%20Spray%20Ear%20Clips">Enquire</a></div></div>
     </article>
     <article class="card reveal" style="transition-delay:.21s">
-      <div class="visual"><img src="images/pave-bombe-earclips.jpg" alt="Pavé diamond bombé ear clips" loading="lazy"></div>
+      <div class="visual"><picture><source srcset="images/pave-bombe-earclips.avif" type="image/avif"><img src="images/pave-bombe-earclips.jpg" alt="Pavé diamond bombé ear clips" loading="lazy"></picture></div>
       <div class="info"><h3>Pavé Bombé Ear Clips</h3><p class="meta">Domed pavé · white metal</p>
       <div class="row"><span class="price">Price on request</span><a class="add" href="mailto:enquiries@heritageantiquejewels.com?subject=Enquiry%3A%20Pav%C3%A9%20Bomb%C3%A9%20Ear%20Clips">Enquire</a></div></div>
     </article>
     <article class="card reveal" style="transition-delay:.28s">
-      <div class="visual"><img src="images/ruby-cluster-earrings.jpg" alt="Gold and ruby cluster earrings" loading="lazy"></div>
+      <div class="visual"><picture><source srcset="images/ruby-cluster-earrings.avif" type="image/avif"><img src="images/ruby-cluster-earrings.jpg" alt="Gold and ruby cluster earrings" loading="lazy"></picture></div>
       <div class="info"><h3>Ruby &amp; Pearl Cluster Earrings</h3><p class="meta">Fluted gold · ruby centre</p>
       <div class="row"><span class="price">Price on request</span><a class="add" href="mailto:enquiries@heritageantiquejewels.com?subject=Enquiry%3A%20Ruby%20%26%20Pearl%20Cluster%20Earrings">Enquire</a></div></div>
     </article>
     <article class="card reveal" style="transition-delay:.35s">
-      <div class="visual"><img src="images/pearl-halo-studs.jpg" alt="Gold and pearl halo stud earrings" loading="lazy"></div>
+      <div class="visual"><picture><source srcset="images/pearl-halo-studs.avif" type="image/avif"><img src="images/pearl-halo-studs.jpg" alt="Gold and pearl halo stud earrings" loading="lazy"></picture></div>
       <div class="info"><h3>Pearl Halo Stud Earrings</h3><p class="meta">Gold · seed-pearl surround</p>
       <div class="row"><span class="price">Price on request</span><a class="add" href="mailto:enquiries@heritageantiquejewels.com?subject=Enquiry%3A%20Pearl%20Halo%20Stud%20Earrings">Enquire</a></div></div>
     </article>
     <article class="card reveal" style="transition-delay:.42s">
-      <div class="visual"><img src="images/gold-pearl-hoops.jpg" alt="Gold and pearl hoop earrings" loading="lazy"></div>
+      <div class="visual"><picture><source srcset="images/gold-pearl-hoops.avif" type="image/avif"><img src="images/gold-pearl-hoops.jpg" alt="Gold and pearl hoop earrings" loading="lazy"></picture></div>
       <div class="info"><h3>Gold &amp; Pearl Hoop Earrings</h3><p class="meta">Yellow gold · pearl-set hoops</p>
       <div class="row"><span class="price">Price on request</span><a class="add" href="mailto:enquiries@heritageantiquejewels.com?subject=Enquiry%3A%20Gold%20%26%20Pearl%20Hoop%20Earrings">Enquire</a></div></div>
     </article>
@@ -427,7 +492,7 @@ footer{background:var(--deep);color:rgba(245,240,231,.7);padding:100px 0 44px}
 
 <!-- CHAPTER IV — BROOCHES -->
 <section class="chapter-hero" id="ch-brooches">
-  <div class="bg" data-parallax="0.12" style="background-image:url('images/emerald-pendant-brooch.jpg')"></div>
+  <div class="bg" data-parallax="0.12" style="background-image:url('images/emerald-pendant-brooch.jpg');background-image:image-set(url('images/emerald-pendant-brooch.avif') type('image/avif'),url('images/emerald-pendant-brooch.jpg') type('image/jpeg'))"></div>
   <div class="chapter-head">
     <div>
       <span class="chapter-num reveal">CHAPTER IV</span>
@@ -443,27 +508,27 @@ footer{background:var(--deep);color:rgba(245,240,231,.7);padding:100px 0 44px}
   </div>
   <div class="shelf" id="s4">
     <article class="card reveal">
-      <div class="visual"><span class="tag">Featured</span><img src="images/emerald-pendant-brooch.jpg" alt="Emerald and diamond pendant brooch on green velvet" loading="lazy"></div>
+      <div class="visual"><span class="tag">Featured</span><picture><source srcset="images/emerald-pendant-brooch.avif" type="image/avif"><img src="images/emerald-pendant-brooch.jpg" alt="Emerald and diamond pendant brooch on green velvet" loading="lazy"></picture></div>
       <div class="info"><h3>Emerald &amp; Diamond Pendant Brooch</h3><p class="meta">Foliate mount · twin emeralds</p>
       <div class="row"><span class="price">Price on request</span><a class="add" href="mailto:enquiries@heritageantiquejewels.com?subject=Enquiry%3A%20Emerald%20%26%20Diamond%20Pendant%20Brooch">Enquire</a></div></div>
     </article>
     <article class="card reveal" style="transition-delay:.07s">
-      <div class="visual"><img src="images/diamond-plume-brooch.jpg" alt="Diamond plume spray brooch on burgundy satin" loading="lazy"></div>
+      <div class="visual"><picture><source srcset="images/diamond-plume-brooch.avif" type="image/avif"><img src="images/diamond-plume-brooch.jpg" alt="Diamond plume spray brooch on burgundy satin" loading="lazy"></picture></div>
       <div class="info"><h3>Diamond Plume Brooch</h3><p class="meta">White metal · feathered spray</p>
       <div class="row"><span class="price">Price on request</span><a class="add" href="mailto:enquiries@heritageantiquejewels.com?subject=Enquiry%3A%20Diamond%20Plume%20Brooch">Enquire</a></div></div>
     </article>
     <article class="card reveal" style="transition-delay:.14s">
-      <div class="visual"><img src="images/diamond-fringe-brooch.jpg" alt="Diamond fringe brooch on a black velvet jacket" loading="lazy"></div>
+      <div class="visual"><picture><source srcset="images/diamond-fringe-brooch.avif" type="image/avif"><img src="images/diamond-fringe-brooch.jpg" alt="Diamond fringe brooch on a black velvet jacket" loading="lazy"></picture></div>
       <div class="info"><h3>Diamond Fringe Brooch</h3><p class="meta">White metal · cascade fringe</p>
       <div class="row"><span class="price">Price on request</span><a class="add" href="mailto:enquiries@heritageantiquejewels.com?subject=Enquiry%3A%20Diamond%20Fringe%20Brooch">Enquire</a></div></div>
     </article>
     <article class="card reveal" style="transition-delay:.21s">
-      <div class="visual"><img src="images/emerald-ribbon-brooch.jpg" alt="Emerald and diamond ribbon brooch on black satin" loading="lazy"></div>
+      <div class="visual"><picture><source srcset="images/emerald-ribbon-brooch.avif" type="image/avif"><img src="images/emerald-ribbon-brooch.jpg" alt="Emerald and diamond ribbon brooch on black satin" loading="lazy"></picture></div>
       <div class="info"><h3>Emerald &amp; Diamond Ribbon Brooch</h3><p class="meta">Emeralds · diamond border</p>
       <div class="row"><span class="price">Price on request</span><a class="add" href="mailto:enquiries@heritageantiquejewels.com?subject=Enquiry%3A%20Emerald%20%26%20Diamond%20Ribbon%20Brooch">Enquire</a></div></div>
     </article>
     <article class="card reveal" style="transition-delay:.28s">
-      <div class="visual"><img src="images/enamel-bird-brooch.jpg" alt="Blue and green enamel bird brooch" loading="lazy"></div>
+      <div class="visual"><picture><source srcset="images/enamel-bird-brooch.avif" type="image/avif"><img src="images/enamel-bird-brooch.jpg" alt="Blue and green enamel bird brooch" loading="lazy"></picture></div>
       <div class="info"><h3>Enamel Bird Brooch</h3><p class="meta">Polychrome enamel · gold mount</p>
       <div class="row"><span class="price">Price on request</span><a class="add" href="mailto:enquiries@heritageantiquejewels.com?subject=Enquiry%3A%20Enamel%20Bird%20Brooch">Enquire</a></div></div>
     </article>
@@ -474,7 +539,7 @@ footer{background:var(--deep);color:rgba(245,240,231,.7);padding:100px 0 44px}
 <section class="story" id="story">
   <div class="wrap story-grid">
     <div class="story-visual reveal">
-      <img src="images/gallery-diamond-necklace.jpg" alt="Woman in an emerald gown wearing a diamond necklace in a gallery of gilt-framed paintings" data-parallax="-0.06" loading="lazy">
+      <picture><source srcset="images/gallery-diamond-necklace.avif" type="image/avif"><img src="images/gallery-diamond-necklace.jpg" alt="Woman in an emerald gown wearing a diamond necklace in a gallery of gilt-framed paintings" data-parallax="-0.06" loading="lazy"></picture>
     </div>
     <div class="story-copy">
       <span class="eyebrow reveal">The House</span>
@@ -516,6 +581,7 @@ footer{background:var(--deep);color:rgba(245,240,231,.7);padding:100px 0 44px}
     <div class="btns reveal">
       <a class="btn solid" href="mailto:enquiries@heritageantiquejewels.com?subject=Collection%20enquiry">Email the house</a>
       <a class="btn" href="mailto:enquiries@heritageantiquejewels.com?subject=Selling%20antique%20jewellery">Sell to us</a>
+      <a class="btn" data-wa="your collection" hidden href="#">WhatsApp</a>
     </div>
   </div>
 </section>
@@ -543,34 +609,32 @@ footer{background:var(--deep);color:rgba(245,240,231,.7);padding:100px 0 44px}
       <div>
         <h4>House</h4>
         <ul>
+          <li><a href="collection.html">The collection</a></li>
           <li><a href="#story">Our story</a></li>
           <li><a href="#enquire">Sell to us</a></li>
           <li><a href="#enquire">Contact</a></li>
+          <li><a data-ig hidden href="#">Instagram</a></li>
+          <li><a data-dibs hidden href="#">1stDibs</a></li>
         </ul>
       </div>
       <div>
         <h4>First to know</h4>
         <p style="font-size:14px;margin-bottom:14px">New pieces sell quickly. Join the list to see each arrival before it goes public.</p>
-        <div class="news-form">
-          <input type="email" placeholder="Your email address" aria-label="Email address">
-          <button type="button">Join</button>
-        </div>
+        <a class="btn" href="mailto:enquiries@heritageantiquejewels.com?subject=Please%20add%20me%20to%20the%20new%20arrivals%20list">Join the list</a>
       </div>
     </div>
     <div class="foot-base">
       <span>© 2026 Heritage Antique Jewels</span>
-      <span>heritageantiquejewels.com</span>
+      <span data-cities hidden></span><span>heritageantiquejewels.com</span>
     </div>
   </div>
 </footer>
 
 <script>
-// Preloader
-window.addEventListener('load', () => {
-  setTimeout(() => document.getElementById('loader').classList.add('done'), 700);
-});
-setTimeout(() => document.getElementById('loader').classList.add('done'), 3200); // safety
 
+// Safety net: if anything in this script fails, show all content without effects
+window.addEventListener('error', () => document.documentElement.classList.remove('js'));
+if (!('IntersectionObserver' in window)) document.documentElement.classList.remove('js');
 // Nav state
 const nav = document.getElementById('nav');
 const onScrollNav = () => nav.classList.toggle('scrolled', window.scrollY > 60);
@@ -631,6 +695,21 @@ document.querySelectorAll('.shelf').forEach(shelf => {
   });
   shelf.addEventListener('click', e => { if (moved) e.preventDefault(); }, true);
 });
+</script>
+<script src="data/site.js"></script><script src="data/pieces.js"></script><script src="assets/site.js"></script>
+<script>
+// Hero video: plays videos/hero.mp4 (or videos/hero-mobile.mp4 on phones) if the file exists; otherwise the photo stays.
+(function(){
+  var v=document.querySelector('.hero-video'); if(!v) return;
+  var c=navigator.connection||{};
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches||c.saveData) return;
+  var list=window.innerWidth<700?['videos/hero-mobile.mp4','videos/hero.mp4']:['videos/hero.mp4'];
+  var i=0;
+  function tryNext(){ if(i>=list.length) return; v.src=list[i++]; v.load(); v.play().catch(function(){}); }
+  v.addEventListener('playing',function(){ v.classList.add('on'); });
+  v.addEventListener('error',tryNext,true);
+  tryNext();
+})();
 </script>
 </body>
 </html>
