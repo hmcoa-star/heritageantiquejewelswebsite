@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.heritageantiquejewels.com/sitemap.xml
+Sitemap: https://heritageantiquejewels.com/sitemap.xml
